@@ -1,0 +1,81 @@
+2015-01-29 19:54:52 Error: [PDOException] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'sys_ayudarg2.director_users' doesn't exist
+Request URL: /
+Stack Trace:
+#0 /var/www/cake/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /var/www/cake/lib/Cake/Model/Datasource/Database/Mysql.php(340): DboSource->_execute('SHOW FULL COLUM...')
+#2 /var/www/cake/lib/Cake/Model/Model.php(1390): Mysql->describe(Object(AppModel))
+#3 /var/www/cake/lib/Cake/Model/Datasource/DboSource.php(2516): Model->schema()
+#4 /var/www/cake/lib/Cake/Model/Datasource/DboSource.php(1727): DboSource->fields(Object(AppModel), 'DirectorUser', '')
+#5 /var/www/cake/lib/Cake/Model/Datasource/DboSource.php(1257): DboSource->generateAssociationQuery(Object(Institution), Object(AppModel), 'belongsTo', 'DirectorUser', Array, Array, true)
+#6 /var/www/cake/lib/Cake/Model/Datasource/DboSource.php(1291): DboSource->queryAssociation(Object(Institution), Object(AppModel), 'belongsTo', 'DirectorUser', Array, Array, true, Array, 0, Array)
+#7 /var/www/cake/lib/Cake/Model/Datasource/DboSource.php(1137): DboSource->queryAssociation(Object(User), Object(Institution), 'hasMany', 'InstitutionDire...', Array, Array, true, Array, 1, Array)
+#8 /var/www/cake/lib/Cake/Model/Model.php(3018): DboSource->read(Object(User), Array)
+#9 /var/www/cake/lib/Cake/Model/Model.php(2990): Model->_readDataSource('first', Array)
+#10 /var/www/cake/lib/Cake/Model/Model.php(1626): Model->find('first', Array)
+#11 /var/www/ayudarg/Controller/UsersController.php(25): Model->read(NULL, '1')
+#12 [internal function]: UsersController->login()
+#13 /var/www/cake/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#14 /var/www/cake/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#15 /var/www/cake/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#16 /var/www/ayudarg/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#17 {main}
+2015-01-29 19:54:52 Error: Fatal Error (1): Using $this when not in object context in [xdebug://debug-eval(1) : eval()'d code, line 1]
+2015-01-29 19:54:52 Error: [FatalErrorException] Using $this when not in object context
+Request URL: /
+Stack Trace:
+#0 /var/www/cake/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Using $this whe...', 'xdebug://debug-...', 1)
+#1 [internal function]: ErrorHandler::handleError(1, 'Using $this whe...', 'xdebug://debug-...', 1, Array)
+#2 /var/www/cake/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Using $this whe...', 'xdebug://debug-...', 1, Array)
+#3 /var/www/cake/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-01-29 19:56:28 Error: [MissingTableException] Table director_users for model DirectorUser was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'director_users',
+  'class' => 'DirectorUser',
+  'ds' => 'default',
+)
+Request URL: /
+Stack Trace:
+#0 /var/www/cake/lib/Cake/Model/Model.php(3640): Model->setSource('director_users')
+#1 /var/www/cake/lib/Cake/Model/Model.php(1387): Model->getDataSource()
+#2 /var/www/cake/lib/Cake/Model/Datasource/DboSource.php(2516): Model->schema()
+#3 /var/www/cake/lib/Cake/Model/Datasource/DboSource.php(1727): DboSource->fields(Object(AppModel), 'DirectorUser', '')
+#4 /var/www/cake/lib/Cake/Model/Datasource/DboSource.php(1257): DboSource->generateAssociationQuery(Object(Institution), Object(AppModel), 'belongsTo', 'DirectorUser', Array, Array, true)
+#5 /var/www/cake/lib/Cake/Model/Datasource/DboSource.php(1291): DboSource->queryAssociation(Object(Institution), Object(AppModel), 'belongsTo', 'DirectorUser', Array, Array, true, Array, 0, Array)
+#6 /var/www/cake/lib/Cake/Model/Datasource/DboSource.php(1137): DboSource->queryAssociation(Object(User), Object(Institution), 'hasMany', 'InstitutionDire...', Array, Array, true, Array, 1, Array)
+#7 /var/www/cake/lib/Cake/Model/Model.php(3018): DboSource->read(Object(User), Array)
+#8 /var/www/cake/lib/Cake/Model/Model.php(2990): Model->_readDataSource('first', Array)
+#9 /var/www/cake/lib/Cake/Model/Model.php(1626): Model->find('first', Array)
+#10 /var/www/ayudarg/Controller/UsersController.php(25): Model->read(NULL, '1')
+#11 [internal function]: UsersController->login()
+#12 /var/www/cake/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#13 /var/www/cake/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#14 /var/www/cake/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#15 /var/www/ayudarg/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#16 {main}
+2015-01-29 19:57:42 Error: [MissingTableException] Table director_users for model DirectorUser was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'director_users',
+  'class' => 'DirectorUser',
+  'ds' => 'default',
+)
+Request URL: /
+Stack Trace:
+#0 /var/www/cake/lib/Cake/Model/Model.php(3640): Model->setSource('director_users')
+#1 /var/www/cake/lib/Cake/Model/Model.php(1387): Model->getDataSource()
+#2 /var/www/cake/lib/Cake/Model/Datasource/DboSource.php(2516): Model->schema()
+#3 /var/www/cake/lib/Cake/Model/Datasource/DboSource.php(1727): DboSource->fields(Object(AppModel), 'DirectorUser', '')
+#4 /var/www/cake/lib/Cake/Model/Datasource/DboSource.php(1257): DboSource->generateAssociationQuery(Object(Institution), Object(AppModel), 'belongsTo', 'DirectorUser', Array, Array, true)
+#5 /var/www/cake/lib/Cake/Model/Datasource/DboSource.php(1291): DboSource->queryAssociation(Object(Institution), Object(AppModel), 'belongsTo', 'DirectorUser', Array, Array, true, Array, 0, Array)
+#6 /var/www/cake/lib/Cake/Model/Datasource/DboSource.php(1137): DboSource->queryAssociation(Object(User), Object(Institution), 'hasMany', 'InstitutionDire...', Array, Array, true, Array, 1, Array)
+#7 /var/www/cake/lib/Cake/Model/Model.php(3018): DboSource->read(Object(User), Array)
+#8 /var/www/cake/lib/Cake/Model/Model.php(2990): Model->_readDataSource('first', Array)
+#9 /var/www/cake/lib/Cake/Model/Model.php(1626): Model->find('first', Array)
+#10 /var/www/ayudarg/Controller/UsersController.php(25): Model->read(NULL, '1')
+#11 [internal function]: UsersController->login()
+#12 /var/www/cake/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#13 /var/www/cake/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#14 /var/www/cake/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#15 /var/www/ayudarg/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#16 {main}
